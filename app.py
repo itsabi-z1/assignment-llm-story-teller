@@ -15,6 +15,10 @@ def create_llm_agent(model="gpt-oss", reasoning=False, temperature=0.5) -> Runna
     system_prompt = """
     You are a creative story teller.
     Create a short story based on the user's input.
+    Story format:
+    <title of the story>
+    <story body>
+    <moral of the story>
     """
     prompt = ChatPromptTemplate.from_messages(
         [
